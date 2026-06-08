@@ -41,129 +41,144 @@ const UserTable = () => {
       }
     };
   }, []);
-    const taskList = [
-        {
-            id: 1,
-            patientName: "Peter",
-            patientImg: "public/05.jpg",
-            doctorTeam: "Dr.john",
-            doctorImgs: ["public/01.jpg", "public/02.jpg", "public/03.jpg"],
-            date: "12/10/2023",
-            disease: "Fracture"
-        },
-        {
-            id: 2,
-            patientName: "Michael",
-            patientImg: "public/05.jpg",
-            doctorTeam: "Dr.doe",
-            doctorImgs: ["public/01.jpg", "public/02.jpg", "public/03.jpg"],
-            date: "14/10/2023",
-            disease: "Skin Care"
-        },
-        {
-            id: 3,
-            patientName: "John",
-            patientImg: "public/05.jpg",
-            doctorTeam: "Dr.june",
-            doctorImgs: ["public/01.jpg", "public/02.jpg", "public/03.jpg"],
-            date: "16/10/2023",
-            disease: "Dental Care"
-        },
-        {
-            id: 4,
-            patientName: "David",
-            patientImg: "public/05.jpg",
-            doctorTeam: "Dr.adam",
-            doctorImgs: ["public/01.jpg", "public/02.jpg", "public/03.jpg"],
-            date: "12/10/2023",
-            disease: "Physician"
-        },
-        {
-            id: 5,
-            patientName: "Peter",
-            patientImg: "public/05.jpg",
-            doctorTeam: "Dr.john",
-            doctorImgs: ["public/01.jpg", "public/02.jpg", "public/03.jpg"],
-            date: "12/10/2023",
-            disease: "Fracture"
-        },
-        {
-            id: 6,
-            patientName: "David",
-            patientImg: "public/05.jpg",
-            doctorTeam: "Dr.adam",
-            doctorImgs: ["public/01.jpg", "public/02.jpg", "public/03.jpg"],
-            date: "12/10/2023",
-            disease: "Physician"
-        },
-        {
-            id: 7,
-            patientName: "Peter",
-            patientImg: "public/05.jpg",
-            doctorTeam: "Dr.john",
-            doctorImgs: ["public/01.jpg", "public/02.jpg", "public/03.jpg"],
-            date: "12/10/2023",
-            disease: "Fracture"
-        }
-    ];
-  
+  const taskList = [
+    {
+      id: 1,
+      patientName: "Peter",
+      patientImg: "/05.jpg",
+      doctorTeam: "Dr.john",
+      doctorImgs: ["/01.jpg", "/02.jpg", "/03.jpg"],
+      date: "12/10/2023",
+      disease: "Fracture",
+    },
+    {
+      id: 2,
+      patientName: "Michael",
+      patientImg: "/05.jpg",
+      doctorTeam: "Dr.doe",
+      doctorImgs: ["/01.jpg", "/02.jpg", "/03.jpg"],
+      date: "14/10/2023",
+      disease: "Skin Care",
+    },
+    {
+      id: 3,
+      patientName: "John",
+      patientImg: "/05.jpg",
+      doctorTeam: "Dr.june",
+      doctorImgs: ["/01.jpg", "/02.jpg", "/03.jpg"],
+      date: "16/10/2023",
+      disease: "Dental Care",
+    },
+    {
+      id: 4,
+      patientName: "David",
+      patientImg: "/05.jpg",
+      doctorTeam: "Dr.adam",
+      doctorImgs: ["/01.jpg", "/02.jpg", "/03.jpg"],
+      date: "12/10/2023",
+      disease: "Physician",
+    },
+    {
+      id: 5,
+      patientName: "Peter",
+      patientImg: "/05.jpg",
+      doctorTeam: "Dr.john",
+      doctorImgs: ["/01.jpg", "/02.jpg", "/03.jpg"],
+      date: "12/10/2023",
+      disease: "Fracture",
+    },
+    {
+      id: 6,
+      patientName: "David",
+      patientImg: "/05.jpg",
+      doctorTeam: "Dr.adam",
+      doctorImgs: ["/01.jpg", "/02.jpg", "/03.jpg"],
+      date: "12/10/2023",
+      disease: "Physician",
+    },
+    {
+      id: 7,
+      patientName: "Peter",
+      patientImg: "/05.jpg",
+      doctorTeam: "Dr.john",
+      doctorImgs: ["/01.jpg", "/02.jpg", "/03.jpg"],
+      date: "12/10/2023",
+      disease: "Fracture",
+    },
+  ];
 
   return (
-    
-                     <table ref={tableRef}  id="operationtd"  className="table custom-data-table" style={{ width: "100%" }} >
-                       <thead>
-                            <tr>
-                                <th className="text-dark-primary  py-2 px-3">
-                                    patient name
-                                </th>
-                                <th className="text-dark-primary  py-2 px-3">
-                                    doctor team
-                                </th>
-                                <th className="text-dark-primary  py-2 px-3">
-                                    date of operation
-                                </th>
-                                <th className="text-dark-primary  py-2 px-3">
-                                    report
-                                </th>
-                                <th className="text-dark-primary  py-2 px-3">
-                                    diseaseses
-                                </th>
-                            </tr>
-                      </thead>
-                        <tbody>
-                            {taskList.map((item, index) => {
-                                return (
-                                    <tr key={index}>
-                                        <td className="d-flex">
-                                            <div>
-                                                 <img src={item.patientImg} alt="" width="25" height="25" className="rounded-circle me-2"/>
-                                            </div>
-                                            <div className="ms-2 text-dark ">{item.patientName}</div>
-                                        </td>
-                                        <td className="position-relative">
-                                            <div className="h-100 d-flex">
-                                                <img src={item.doctorImgs[0]} alt="" width="25" height="25"
-                                                    className="rounded-circle operation-team-img border border-white img-1"/>
-                                                <img src={item.doctorImgs[1]} alt="" width="25" height="25"
-                                                    className="rounded-circle operation-team-img border border-white img-2"/>
-                                                <img src={item.doctorImgs[2]} alt="" width="25" height="25"
-                                                    className="rounded-circle operation-team-img border border-white img-3"/>
-                                                <div className="ms-2 text-dark-primary fw-600  text-capitalize">
-                                                    <a href="#">{item.doctorTeam}</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td className="text-dark ">{item.date}</td>
-                                        <td className="text-dark ">
-                                            <Link to="#"><i className="bi bi-file-pdf text-danger"></i></Link>
-                                        </td>
-                                        <td className="text-dark ">{item.disease}</td>
-                                    </tr>
-                                )
-                            })}
-                        </tbody>
-                  </table>  
-                
+    <table
+      ref={tableRef}
+      id="operationtd"
+      className="table custom-data-table"
+      style={{ width: "100%" }}
+    >
+      <thead>
+        <tr>
+          <th className="text-dark-primary  py-2 px-3">patient name</th>
+          <th className="text-dark-primary  py-2 px-3">doctor team</th>
+          <th className="text-dark-primary  py-2 px-3">date of operation</th>
+          <th className="text-dark-primary  py-2 px-3">report</th>
+          <th className="text-dark-primary  py-2 px-3">diseaseses</th>
+        </tr>
+      </thead>
+      <tbody>
+        {taskList.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td className="d-flex">
+                <div>
+                  <img
+                    src={item.patientImg}
+                    alt=""
+                    width="25"
+                    height="25"
+                    className="rounded-circle me-2"
+                  />
+                </div>
+                <div className="ms-2 text-dark ">{item.patientName}</div>
+              </td>
+              <td className="position-relative">
+                <div className="h-100 d-flex">
+                  <img
+                    src={item.doctorImgs[0]}
+                    alt=""
+                    width="25"
+                    height="25"
+                    className="rounded-circle operation-team-img border border-white img-1"
+                  />
+                  <img
+                    src={item.doctorImgs[1]}
+                    alt=""
+                    width="25"
+                    height="25"
+                    className="rounded-circle operation-team-img border border-white img-2"
+                  />
+                  <img
+                    src={item.doctorImgs[2]}
+                    alt=""
+                    width="25"
+                    height="25"
+                    className="rounded-circle operation-team-img border border-white img-3"
+                  />
+                  <div className="ms-2 text-dark-primary fw-600  text-capitalize">
+                    <a href="#">{item.doctorTeam}</a>
+                  </div>
+                </div>
+              </td>
+              <td className="text-dark ">{item.date}</td>
+              <td className="text-dark ">
+                <Link to="#">
+                  <i className="bi bi-file-pdf text-danger"></i>
+                </Link>
+              </td>
+              <td className="text-dark ">{item.disease}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
 };
 

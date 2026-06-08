@@ -35,7 +35,7 @@ import LoginPage from './pages/Login/LoginPage.jsx';
 import RagisterPage from './pages/Ragister/RagisterPage.jsx';
 import ForgetPassPage from './pages/ForgetPass/ForgetPassPage.jsx';
 import ComponentPage from './pages/Component/ComponentPage.jsx';
-// import NotFoundPage from "./pages/notfound/NotFoundPage.jsx";
+import NotFoundPage from "./pages/notfound/NotFoundPage.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -157,13 +157,13 @@ const router = createBrowserRouter([
     },
   ],
 },
-//  {
-//     path: "*",
-//     element: <NotFoundPage />,
-//   },
+ {
+    path: "*",
+    element: <NotFoundPage />,
+  },
 ]);
 
-const RootApp = () => {
+export const RootApp = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -13,7 +13,7 @@ function SideBar() {
         <div className="sidebar-box text-center position-fixed slim-outer bg-dark-primary">
           <div className="sidebar-heading bg-dark d-flex align-items-center justify-content-between p-3 border-dark border-bottom">
             <Link to="/">
-              <img src="public/healthcare-logo.png" width="200" alt="" />
+              <img src="/healthcare-logo.png" width="200" alt="" />
             </Link>
             <button className="btn btn-primary rounded   closesidebar d-lg-none btn-sm">
               <i className="fa-solid fa-xmark text-white"></i>

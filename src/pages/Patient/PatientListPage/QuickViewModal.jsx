@@ -24,7 +24,7 @@ function QuickViewModal() {
               <div className="d-flex justify-content-center">
                 <div className="patient-img text-center mb-3">
                   <img
-                    src="public/pexels-mart-production-7089401.jpg"
+                    src="/pexels-mart-production-7089401.jpg"
                     alt=""
                     className="rounded-circle"
                   />

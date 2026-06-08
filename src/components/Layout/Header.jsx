@@ -8,20 +8,19 @@ import "../../includes/css/style.css";
 // ================= UI Framework =================
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
-
 // ================= Project CSS =================
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-
   useEffect(() => {
-  const dropdownButtons = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+    const dropdownButtons = document.querySelectorAll(
+      '[data-bs-toggle="dropdown"]',
+    );
 
-  dropdownButtons.forEach((btn) => {
-    Dropdown.getOrCreateInstance(btn);
-  });
-}, []);
+    dropdownButtons.forEach((btn) => {
+      Dropdown.getOrCreateInstance(btn);
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -162,10 +161,10 @@ function Header() {
             <div className="d-flex justify-content-lg-end justify-content-between align-items-center gap-2">
               <div className="d-block d-lg-none">
                 <button className="btn shadow-0 focus-0 sidebar-btn rounded border-0 sidebarToggle">
-                  <img src="public/menu-icons.svg" alt="" />
+                  <img src="/menu-icons.svg" alt="" />
                 </button>
                 <Link to="/">
-                  <img src="public/ERP-Logo(1).png" width="180" alt="" />
+                  <img src="/ERP-Logo(1).png" width="180" alt="" />
                 </Link>
               </div>
               <div className="d-flex align-items-center">
@@ -198,7 +197,7 @@ function Header() {
                       <form>
                         <div className="border bg-light position-relative h-100 d-flex align-items-center header-search mw-100">
                           <button className="btn btn-transparent border-0 position-absolute ms-1">
-                            <img src="public/search2.svg" alt="" />
+                            <img src="/search2.svg" alt="" />
                           </button>
                           <input
                             type="search"
@@ -241,7 +240,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/01.jpg"
+                                    src="/01.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -271,7 +270,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/02.jpg"
+                                    src="/02.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -310,7 +309,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/03.jpg"
+                                    src="/03.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -340,7 +339,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/01.jpg"
+                                    src="/01.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -370,7 +369,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/02.jpg"
+                                    src="/02.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -409,7 +408,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/03.jpg"
+                                    src="/03.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -470,7 +469,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/01.jpg"
+                                    src="/01.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -498,7 +497,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/02.jpg"
+                                    src="/02.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -526,7 +525,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/03.jpg"
+                                    src="/03.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -554,7 +553,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/01.jpg"
+                                    src="/01.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -582,7 +581,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/02.jpg"
+                                    src="/02.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -610,7 +609,7 @@ function Header() {
                               <div className="d-flex align-items-center notification-row">
                                 <div className="d-flex align-items-center text-center p-0 notification-user-img">
                                   <img
-                                    src="public/03.jpg"
+                                    src="/03.jpg"
                                     width="48"
                                     height="48"
                                     alt=""
@@ -645,11 +644,7 @@ function Header() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <img
-                      src="public/01_2.png"
-                      alt=""
-                      className="border rounded"
-                    />
+                    <img src="/01_2.png" alt="" className="border rounded" />
                     <span className="justify-content-between align-items-center gap-4 px-2 w-100 d-none d-xl-flex">
                       <span className="my-0 py-0 lh-1">
                         <span className="pill-badge-msg lh-sm text-capitalize pb-0 mb-0 d-block">
@@ -726,12 +721,12 @@ function Header() {
           <div className="col-6 d-none d-lg-block">
             <div className="d-lg-flex align-items-center">
               <button className="btn shadow-0 focus-0 d-none d-lg-block sidebar-btn rounded border-0 sidebarToggle">
-                <img src="public/menu-icons.svg" alt="" />
+                <img src="/menu-icons.svg" alt="" />
               </button>
               <form className="d-none d-lg-block mw-200">
                 <div className="bg-light-blue position-relative h-100 d-flex align-items-center header-search rounded-10">
                   <button className="btn btn-transparent border-0 position-absolute top-0">
-                    <img src="public/search2.svg" alt="" />
+                    <img src="/search2.svg" alt="" />
                   </button>
                   <input
                     type="search"

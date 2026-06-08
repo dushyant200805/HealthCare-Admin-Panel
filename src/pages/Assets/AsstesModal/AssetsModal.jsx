@@ -87,7 +87,7 @@ function AssetsModal() {
                 <div className="row g-3">
                   <div className="col-lg-4">
                     <img
-                      src="public/inv-img.webp"
+                      src="/inv-img.webp"
                       className="w-100 h-100 object-fit-cover"
                       alt=""
                     />
