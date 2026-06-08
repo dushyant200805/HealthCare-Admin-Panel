@@ -22,9 +22,17 @@ function RoomsList () {
       pageLength: 5,
       lengthMenu: [5, 15, 20, 25],
       ordering: true,
+      order: [],
       searching: true,
       info: true,
       paging: true,
+      autoWidth: false,
+      columnDefs: [
+        {
+            targets: [0, 6],  // First column and action column
+            orderable: false
+        }
+      ],
       pagingType: "simple_numbers",
       language: {
         search: "",
@@ -80,30 +88,30 @@ function RoomsList () {
         </div>
         <div className="bg-white  rounded-10 my-3">
           <div className="p-4">
-            <table className="table custom-data-table" ref={tableRef} id="allotroomdt">
+            <table className="table custom-data-table text-center w-100" ref={tableRef} id="allotroomdt">
               <thead>
                 <tr>
-                  <td className="text-dark-primary   no-sort ">
+                  <th className="text-dark-primary  text-center    no-sort ">
                     <input type="checkbox" className="" name="check" value="check"/>
-                  </td>
-                  <td className="text-dark-primary    ">
+                  </th>
+                  <th className="text-dark-primary  text-center ">
                     Room No
-                  </td>
-                  <td className="text-dark-primary    ">
+                  </th>
+                  <th className="text-dark-primary  text-center">
                     Room Type
-                  </td>
-                  <td className="text-dark-primary    ">
+                  </th>
+                  <th className="text-dark-primary  text-center">
                     Patient
-                  </td>
-                  <td className="text-dark-primary    ">
+                  </th>
+                  <th className="text-dark-primary  text-center">
                     Allotment Date
-                  </td>
-                  <td className="text-dark-primary    ">
+                  </th>
+                  <th className="text-dark-primary  text-center">
                     Discharge Date
-                  </td>
-                  <td className="text-dark-primary   no-sort">
+                  </th>
+                  <th className="text-dark-primary  text-center   no-sort">
                     Action
-                  </td>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -111,11 +119,11 @@ function RoomsList () {
                     return(
                         <tr key={index}>
                             <td><input type="checkbox"/></td>
-                            <td>{item.roomNo}</td>
-                            <td>{item.roomType}</td>
-                            <td>{item.Patient}</td>
-                            <td>{item.allotmentDate}</td>
-                            <td>{item.dischargeDate}</td>
+                            <td className="text-center">{item.roomNo}</td>
+                            <td className="text-center">{item.roomType}</td>
+                            <td className="text-center">{item.Patient}</td>
+                            <td className="text-center">{item.allotmentDate}</td>
+                            <td className="text-center">{item.dischargeDate}</td>
                             <td className="position-relative">
                                 <a href="#" className="btn" data-bs-toggle="modal" data-bs-target="#editroomallot"><i
                                     className=" bi bi-pencil-square"></i></a>

@@ -21,9 +21,16 @@ function DepartmentList() {
       pageLength: 5,
       lengthMenu: [5, 15, 20, 25],
       ordering: true,
+      order: [],
       searching: true,
       info: true,
       paging: true,
+      columnDefs: [
+        {
+            targets: [0, 5],
+            orderable: false
+        }
+      ],
       pagingType: "simple_numbers",
       language: {
         search: "",
@@ -36,15 +43,29 @@ function DepartmentList() {
       },
       dom: '<"d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3"lf>rt<"d-flex justify-content-between align-items-center mt-4 flex-wrap gap-3"ip>',
     });
-   
+
+    const $table = $(tableRef.current);
+
+    $table.on('change', 'thead input[type="checkbox"]', function () {
+      const isChecked = $(this).prop('checked');
+      $table.find('tbody input[type="checkbox"]').prop('checked', isChecked);
+    });
+
+    $table.on('change', 'tbody input[type="checkbox"]', function () {
+      const total = $table.find('tbody input[type="checkbox"]').length;
+      const checked = $table.find('tbody input[type="checkbox"]:checked').length;
+      $table.find('thead input[type="checkbox"]').prop('checked', total === checked);
+    });
+
     return () => {
+      $table.off('change');
       if ($.fn.DataTable.isDataTable(tableRef.current)) {
         table.destroy();
       }
     };
          }, []);
 
-         const data = [
+       const data = [
         {
           id:1,
           Department: "Cardiology",
@@ -93,12 +114,12 @@ function DepartmentList() {
           status: "active",
           statusClass: "bg-primary"
         },
-        
+       
            ];
 
   return (
     <>
-    
+   
      <PageTitle title="HC-ERP-Department List"/>
       <div className="px-4 mb-4 min-vh-100 outer-main">
         <h3 className="fw-600 text-dark-primary text-capitalize">Department List</h3>

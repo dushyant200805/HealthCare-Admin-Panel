@@ -1,20 +1,20 @@
 function BageCard2 () {
     const data = [
-        { id:1,  BageColorCLass:"bg-primary"},
-        { id:2,  BageColorCLass:"bg-secondary"},
-        { id:3,  BageColorCLass:"bg-info" },
-        { id:4,  BageColorCLass:"bg-light"},
-        { id:5,  BageColorCLass:"bg-warning"},
-        { id:6,  BageColorCLass:"bg-dark"},
-        { id:7,  BageColorCLass:"bg-danger" },
-        { id:8,  BageColorCLass:"bg-success"},
-        { id:9,  BageColorCLass:"bg-orange"},
+        { id:1,  BageColorCLass:"bg-primary", texColor:"text-white"},
+        { id:2,  BageColorCLass:"bg-secondary", texColor:"text-white"},
+        { id:3,  BageColorCLass:"bg-info", texColor:"text-white" },
+        { id:4,  BageColorCLass:"bg-light", texColor:"text-black"},
+        { id:5,  BageColorCLass:"bg-warning", texColor:"text-black"},
+        { id:6,  BageColorCLass:"bg-dark", texColor:"text-white"},
+        { id:7,  BageColorCLass:"bg-danger", texColor:"text-white" },
+        { id:8,  BageColorCLass:"bg-success", texColor:"text-white"},
+        { id:9,  BageColorCLass:"bg-orange", texColor:"text-white"},
     ];
      return (
         <>
           {data.map((item,index)=>{
              return (
-                 <div className={`badge ${item.BageColorCLass} text-white rounded-pill mx-1 text-capitalize`} key={index}>Dark Badge</div>
+                 <div className={`badge ${item.BageColorCLass} rounded-pill mx-1 text-capitalize ${item.texColor}`} key={index}>Dark Badge</div>
              );
           })}
         </>
